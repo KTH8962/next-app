@@ -1,6 +1,6 @@
 import wait from "@/utils/wait"
-import Abc from "./Abc"
-import Xyz from "./Xyz"
+import Abc from "./@abc/page"
+import Xyz from "./@xyz/page"
 import { Suspense } from "react"
 import Loader from "@/components/Loader"
 
