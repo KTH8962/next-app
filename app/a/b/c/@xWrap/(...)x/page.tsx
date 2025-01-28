@@ -1,3 +1,20 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+
 export default function XPage() {
-  return <h1>Intercepted X Page!!</h1>
+  const router = useRouter()
+  return (
+    <>
+      <h1>Intercepted X Page!!</h1>
+      <button
+        type="button"
+        onClick={() => {
+          router.back()
+        }}
+      >
+        닫기
+      </button>
+    </>
+  )
 }
