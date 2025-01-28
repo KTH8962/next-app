@@ -1,3 +1,5 @@
+## next 설치
+
 npx create-next-app@latest <프로젝트이름>
 ✔ Would you like to use TypeScript? … Yes # 타입스크립트 사용 여부
 ✔ Would you like to use ESLint? … Yes # ESLint 사용 여부
@@ -7,7 +9,15 @@ npx create-next-app@latest <프로젝트이름>
 ✔ Would you like to use Turbopack for next dev? … No # Turbopack 사용 여부
 ✔ Would you like to customize the import alias (@/_ by default)? … No # `@/_` 외 경로 별칭 사용 여부
 
+## next middleware 경로
+
 npm i path-to-regexp@8
+
+## next Auth
+
+npm i next-auth@beta path-to-regexp
+
+npx auth secret
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

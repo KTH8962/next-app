@@ -26,16 +26,3 @@ export async function middleware(request: NextRequest) {
 function isMatch(pathname: string, urls: string[]) {
   return urls.some((url) => !!match(url)(pathname))
 }
-
-export const config = {
-  matcher: [
-    {
-      source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
-      // Prefetch 요청을 미들웨어에서 제외!
-      missing: [
-        { type: "header", key: "next-router-prefetch" },
-        { type: "header", key: "purpose", value: "prefetch" },
-      ],
-    },
-  ],
-}
