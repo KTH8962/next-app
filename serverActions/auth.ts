@@ -12,10 +12,7 @@ export const signInWithCredentials = async (formData: FormData) => {
   // ...
 }
 export const signInWithGoogle = async () => {
-  await signIn("google", {
-    /* 옵션 */
-  })
-  // ...
+  await signIn("google", { redirectTo: "/" })
 }
 export const signInWithGitHub = async () => {
   await signIn("github", {
