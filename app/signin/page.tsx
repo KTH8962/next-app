@@ -1,4 +1,4 @@
-import { signInWithCredentials } from "@/serverActions/auth"
+import { signInWithCredentials, signInWithGoogle } from "@/serverActions/auth"
 
 export default function SignInPage() {
   return (
@@ -22,6 +22,9 @@ export default function SignInPage() {
           <input name="password" type="password" />
         </label>
         <button>로그인</button>
+      </form>
+      <form action={signInWithGoogle}>
+        <button type="submit">구글 로그인</button>
       </form>
     </>
   )

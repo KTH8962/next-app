@@ -5,6 +5,7 @@ import styles from "./Header.module.scss"
 import Link from "next/link"
 //import { useEffect } from "react"
 import { getSession, signOutWithForm } from "@/serverActions/auth"
+import Image from "next/image"
 
 // const links = [
 //   { href: "/", label: "home" },
@@ -21,13 +22,28 @@ export default async function Header() {
   // useEffect(() => {
   //   router.prefetch("moives")
   // }, [router])
-  console.log(session)
+  const userInfo = session?.user
   return (
     <header className={styles.header}>
       <h1 className={styles.header__logo}>Header</h1>
+      {userInfo ? (
+        <div className={styles.google}>
+          <figure className={styles.imgBox}>
+            <Image
+              src={userInfo?.image ?? ""}
+              alt={userInfo?.name ?? ""}
+              width={100}
+              height={100}
+            />
+          </figure>
+          <p className={styles.imgName}>{userInfo?.name}</p>
+        </div>
+      ) : (
+        ""
+      )}
       <nav>
         <Link href="/">메인</Link>
-        {session?.user ? (
+        {userInfo ? (
           <>
             <form action={signOutWithForm}>
               <button type="submit">로그아웃</button>
