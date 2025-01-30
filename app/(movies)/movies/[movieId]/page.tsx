@@ -1,4 +1,4 @@
-import wait from "@/app/utils/wait"
+import wait from "@/utils/wait"
 
 interface Movie {
   Title: string
