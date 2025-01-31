@@ -6,6 +6,7 @@ import Link from "next/link"
 //import { useEffect } from "react"
 import { getSession, signOutWithForm } from "@/serverActions/auth"
 import Image from "next/image"
+import { oswald } from "@/styles/fonts"
 
 // const links = [
 //   { href: "/", label: "home" },
@@ -27,7 +28,7 @@ export default async function Header() {
     <header className={styles.header}>
       <h1 className={styles.header__logo}>Header</h1>
       {userInfo ? (
-        <div className={styles.google}>
+        <div className={`${styles.google} ${oswald.className}`}>
           <figure className={styles.imgBox}>
             <Image
               src={userInfo?.image ?? ""}
