@@ -12,7 +12,7 @@ export const {
   providers: [
     Credentials({
       authorize: async (credentials) => {
-        const { displayName, email, password } = credentials
+        const { displayName } = credentials
         const user = { id: "", name: "", email: "", image: "" }
 
         // 사용자 이름이 있는 경우, 회원가입!
